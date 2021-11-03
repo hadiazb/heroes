@@ -10,16 +10,16 @@
     <mat-nav-list>
       <a routerLink="./listado" mat-list-item (click)="sidenav.toggle()">
         <mat-icon mat-list-icon>label</mat-icon>
-        <span> Listado de Héroes</span></a
-      >
+        <span> Listado de Héroes</span>
+      </a>
       <a routerLink="./agregar" mat-list-item (click)="sidenav.toggle()">
         <mat-icon mat-list-icon>add</mat-icon>
-        <span>Añadir Héroe</span></a
-      >
+        <span>Añadir Héroe</span>
+      </a>
       <a routerLink="./buscar" mat-list-item (click)="sidenav.toggle()">
         <mat-icon mat-list-icon>search</mat-icon>
-        <span>Buscar Héroe</span></a
-      >
+        <span>Buscar Héroe</span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-toolbar>
@@ -27,7 +27,8 @@
       <mat-icon>menu</mat-icon>
     </button>
     <span class="spacer"></span>
-    <button mat-button>Logout</button>
+    <span>{{auth.usuario}}</span>
+    <button mat-button (click)="logout()">Logout</button>
   </mat-toolbar>
   <div class="container">
     <router-outlet></router-outlet>
